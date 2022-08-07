@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
     <!-- Header-->
@@ -21,7 +21,9 @@
       <nav>
         <div class="text-center">
           <div class="container">
-            <a href="/" class="nav-brand text-dark"> User Management System</a>
+            <a href="/" class="nav-brand text-heading"
+              >User Management System</a
+            >
           </div>
         </div>
       </nav>
@@ -31,45 +33,49 @@
     <!-- Main Site -->
     <main id="site-main">
       <div class="container">
-        <div class="box-nav-d-flex-justify-between">
+        <div class="box-nav d-flex justify-between">
           <a href="/add-user" class="border-shadow">
             <span class="text-gradient"
-              >New User <i class="fa-solid fa-user"></i>
+              >New User <i class="text-gradient fa-solid fa-user"></i>
             </span>
           </a>
         </div>
 
         <!-- form handeling -->
         <form action="/" method="POST">
-            <table class="lable">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>@Email</th>
-                        <th>Gender</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Username</td>
-                        <td>example@gmail.com</td>
-                        <td>Male</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="#" class="btn border-shadow update">
-                                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                            </a>
-                            <a class="btn border-shadow delete">
-                                <span class="text-gradient"><i class="fas fa-times"></i></span>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>@Email</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Username</td>
+                <td>example@gmail.com</td>
+                <td>Male</td>
+                <td>Active</td>
+                <td>
+                  <a href="#" class="btn border-shadow update">
+                    <span class="text-gradient"
+                      ><i class="fas fa-pencil-alt"></i
+                    ></span>
+                  </a>
+                  <a class="btn border-shadow delete">
+                    <span class="text-gradient"
+                      ><i class="fas fa-times"></i
+                    ></span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </form>
       </div>
     </main>

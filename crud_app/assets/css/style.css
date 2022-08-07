@@ -1,22 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Space+Mono&display=swap");
 
-.root{
-    --dark: #1E1E1E;
-    --light: #fefefe;
-    --border: #dee2e6;
-    --border-btn: #edf2f4;
+:root {
+  --dark: #1e1e1e;
+  --light: #f1eef5;
+  --border: #363636;
+  --border-btn: #3e3e3e;
+  --accent-color-1: #7491e9;
+  --accent-color-2: #4f7ae8;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--dark);
 }
-a{
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
+
+a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+tr {
+  color: var(--light);
 }
 
 .container {
-    
+  max-width: 1024px;
+  margin: auto;
+}
+
+.nav-brand {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border-shadow {
+  border: 1px solid var(--border-btn);
+  box-shadow: 1px 3px 10px #121212;
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.text-heading {
+  color: #4f7ae8;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-gradient, .fas {
+  background: linear-gradient(
+    to right,
+    var(--accent-color-1),
+    var(--accent-color-2)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#header nav {
+  background-color: #1e1e1e;
+  padding: 1em 0em;
+  width: 100%;
+  box-shadow: 1px 0px 10px #121212;
+}
+
+#site-main {
+  margin-top: 6em;
+  font-family: "Open-Sans", sans-serif;
+}
+
+#site-main .container .box-nav > a {
+  font-size: 1em;
+  padding: 0.5em 1em;
+}
+
+#site-main .container form {
+  margin: 2em 0;
+}
+
+table {
+  border-spacing: 0px;
+  width: 100%;
+}
+
+.table td,
+.table th {
+  padding: 1em;
+  vertical-align: top;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.table td > a.btn {
+  padding: 0.3em 1em;
+  font-size: 1.1em;
+  margin: 0.2em;
+}
+
+.table tr:hover td {
+  background-color: var(--accent-color-1);
+}
+
+.table tr:hover td > a {
+    box-shadow: none;
+}
+
+.table .thead-dark th {
+    background-color: var(--accent-color-2);
+}
+
+@media only screen and (max-width: 1024px) {
+    table, thead, tbody, th, tr, td {
+        
+    }
 }
