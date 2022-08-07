@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap');
+
+.root{
+    --dark: #1E1E1E;
+    --light: #fefefe;
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    
+}
