@@ -16,14 +16,15 @@ exports.create = (req, res) => {
     name: req.body.name,
     email: req.body.email,
     gender: req.body.gender,
-    staus: req.body.status,
+    status: req.body.status,
   });
 
   // save user in database
   user
     .save(user)
     .then((data) => {
-      res.send(data);
+      //res.send(data);
+      res.redirect("/");
     })
     .catch((err) => {
       res.status(500).send({

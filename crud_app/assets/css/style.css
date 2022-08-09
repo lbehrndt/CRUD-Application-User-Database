@@ -264,11 +264,16 @@ table {
 #add_user .form-group .btn {
   width: 100%;
   padding: 0.9em 1em;
-  background-color: var(--accent-color-2);
+  background-color: var(--accent-color-1);
   border: none;
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   cursor: pointer;
   border-radius: 0.2em;
   margin: 0.5em 0;
+}
+
+#update_user .form-group .btn:hover,
+#add_user .form-group .btn:hover {
+  background-color: var(--accent-color-2);
 }
