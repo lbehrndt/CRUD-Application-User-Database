@@ -21,7 +21,7 @@ exports.add_user = (req, res) => {
 exports.update_user = (req, res) => {
   const id = req.query.id;
   axios
-    .get("http://localhost:3000/api/users", { params: { id: req.query.id } }) //fix
+    .get("http://localhost:3000/api/users", { params: { id: req.query.id } }) //BUG
     .then(function (userdata) {
       console.log(id);
       res.render("update_user", { user: userdata.data });
