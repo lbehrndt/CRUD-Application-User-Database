@@ -36,6 +36,22 @@ exports.create = (req, res) => {
 
 // retieve and return all users / retrieve and return a single user
 exports.find = (req, res) => {
+    if(req.query.id) {
+        const id = req.params.id;
+
+        Userdb.findbyId(id).then(data=>{
+            if(!data) {
+                res.status(404).send({
+                    message: `Not found user with id: ${id}.`
+                })
+            } else {
+                res.send(data);            }
+        }).catch(err => {
+            res.status(500).send({
+                message: `Error retrieving user with id: ${id}.`
+            })
+        })
+    }
   Userdb.find()
     .then((user) => {
       res.send(user);
