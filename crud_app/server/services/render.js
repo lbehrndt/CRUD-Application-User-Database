@@ -19,5 +19,14 @@ exports.add_user = (req, res) => {
 };
 
 exports.update_user = (req, res) => {
-  res.render("update_user");
+  const id = req.query.id;
+  axios
+    .get("http://localhost:3000/api/users", { params: { id: req.query.id } }) //fix
+    .then(function (userdata) {
+      console.log(id);
+      res.render("update_user", { user: userdata.data });
+    })
+    .catch((err) => {
+      res.send(err + " hiii");
+    });
 };
