@@ -40,7 +40,7 @@ exports.find = (req, res) => {
   if (req.query.id) {
     const id = req.params.id;
     
-    Userdb.findbyId(id)
+    Userdb.findOne(id)
     .then((data) => {
         if (!data) {
           res.status(404).send({
