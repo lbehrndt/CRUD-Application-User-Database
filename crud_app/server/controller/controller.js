@@ -32,6 +32,7 @@ exports.create = (req, res) => {
           err.message ||
           "Some error occured while creating a create operation.",
       });
+      return;
     });
 };
 
@@ -46,6 +47,7 @@ exports.find = (req, res) => {
           res.status(404).send({
             message: `Not found user with id: ${id}.`,
           });
+          return;
         } else {
           res.send(data);
         }
@@ -54,6 +56,7 @@ exports.find = (req, res) => {
         res.status(500).send({
           message: `Error retrieving user with id: ${id}.`,
         });
+        return;
       });
   }
   Userdb.find()
@@ -62,18 +65,19 @@ exports.find = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message:
-          err.message || "Some error occured while creating a find operation.",
+         message: err.messagen || "Some error occured while creating a find operation.",
       });
+      return;
     });
 };
 
 // update a new identifier user by user id
 exports.update = (req, res) => {
   if (!req.body) {
-    return res.status(400).send({
+   res.status(400).send({
       message: "Data to update cannot be empty",
     });
+    return;
   }
 
   const id = req.params.id;
@@ -85,6 +89,7 @@ exports.update = (req, res) => {
         res.status(404).send({
           message: `Cannot update user with ${id}. Maybe user not found!`,
         });
+        return;
       } else {
         res.send(data);
       }
@@ -93,6 +98,7 @@ exports.update = (req, res) => {
       res.status(500).send({
         message: "Error Update user information",
       });
+      return;
     });
 };
 
@@ -105,6 +111,7 @@ exports.delete = (req, res) => {
         res.status(404).send({
           message: `Cannot delete user with ${id}. Maybe id is wrong!`,
         });
+        return;
       } else {
         res.send({
           message: "User was deleted successfully.",
@@ -115,5 +122,6 @@ exports.delete = (req, res) => {
       res.status(500).send({
         message: `Could not delete user with id: ${id}.`,
       });
+      return;
     });
 };
