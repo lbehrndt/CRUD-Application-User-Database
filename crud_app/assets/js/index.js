@@ -9,7 +9,7 @@ $("#update_user").submit(function (event) {
   let data = {};
 
   $.map(unindexed_array, function (n, i) {
-    data[n["name"]] = n["value"];
+    data[n["name"]] = i["value"];
   });
 
   let request = {
@@ -21,4 +21,8 @@ $("#update_user").submit(function (event) {
   $.ajax(request).done(function (response) {
     alert("Data updated successfully");
   });
+});
+
+$("#delete_user").submit(function (event) {
+  alert("Data deleted successfully");
 });
